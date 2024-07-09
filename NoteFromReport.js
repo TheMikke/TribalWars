@@ -86,7 +86,7 @@ var ScriptData = {
 			defensiveNukes: "bunkier",
 			noteCreated: "Utworzono notatkÄ™",
 			addReportTo: "Dodaj raport do ktĂłrej wioski:"
-		}
+		},
 		cs_CZ: {
 			unknown: "Nezname",
 			verifyReportPage: "Skript musi byt spusten na strance s oznamenim.",
