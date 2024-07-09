@@ -86,23 +86,7 @@ var ScriptData = {
 			defensiveNukes: "bunkier",
 			noteCreated: "Utworzono notatkÄ™",
 			addReportTo: "Dodaj raport do ktĂłrej wioski:"
-		},
-		cs_CZ: {
-			unknown: "Nezname",
-			verifyReportPage: "Skript musi byt spusten na strance s oznamenim.",
-			offensive: "Utocna",
-			defensive: "Obranna",
-			probOffensive: "Nejspis utocna",
-			probDefensive: "Nejspis ubranna",
-			noSurvivors: "Neprezila zadna jednotka",
-			watchtower: "Strazni vez",
-			wall: "Hradby",
-			firstChurch: "Prvni kostel",
-			church: "Kostel",
-			defensiveNukes: "Obranne jednotky",
-			noteCreated: "Poznamka vytvorena",
-			addReportTo: "Pridat oznameni k vesnici:"
-		},
+		}
 	},
 	_t = a => null != translations[game_data.locale] ? translations[game_data.locale][a] : translations.pt_PT[a],
 	initTranslations = () => localStorage.getItem(`${LS_prefix}_langWarning`) ? 1 : (void 0 === translations[game_data.locale] && UI.ErrorMessage(`No translation found for <b>${game_data.locale}</b>.`, 3e3), localStorage.setItem(`${LS_prefix}_langWarning`, 1), 0);
