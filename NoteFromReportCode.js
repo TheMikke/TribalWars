@@ -96,7 +96,7 @@ var ScriptData = {
 			probDefensive: "Nejspis ubranna",
 			noSurvivors: "Neprezila zadna jednotka",
 			watchtower: "Strazni vez",
-			wall: "Hradby",
+			wall: "Hradby uroven",
 			firstChurch: "Prvni kostel",
 			church: "Kostel",
 			defensiveNukes: "Obrannych jednotek",
@@ -206,7 +206,7 @@ CriarRelatorioNotas = {
 		var a, e = $("#report_export_code").text(),
 			i = $("#content_value > table > tbody > tr > td:nth-child(2) > table > tbody > tr > td > table:nth-child(2) > tbody > tr:nth-child(2)").text().replace(/\s+/g, " ").replace(/.{5}$/g, ""),
 			s = "";
-		return (this.dados.player.playerEstaAtacar || this.dados.player.playerQuerInfoDefensor) && (a = this.dados.aldeia.defensiva.tipoAldeia), this.dados.player.playerEstaAtacar && !this.dados.player.playerQuerInfoAtacante || (a = this.dados.aldeia.ofensiva.tipoAldeia), !this.dados.player.playerEstaAtacar && this.dados.player.playerQuerInfoDefensor && (a = this.dados.aldeia.defensiva.tipoAldeia), s += " | [color=#" + (a == _t("offensive") || a == _t("probOffensive") ? "ff0000" : "0eae0e") + "][b]" + a + "[/b][/color] | ", (this.dados.player.playerEstaAtacar || this.dados.player.playerQuerInfoDefensor) && (this.dados.aldeia.defensiva.edificios.torre[0] && (s += "[building]watchtower[/building] " + _t("watchtower") + this.dados.aldeia.defensiva.edificios.torre[1] + " | "), this.dados.aldeia.defensiva.edificios.muralha[0] && (s += "[building]wall[/building][color=#5c3600][b] " + _t("wall") + " " + this.dados.aldeia.defensiva.edificios.muralha[1] + "[/b][/color] | "), this.dados.aldeia.defensiva.edificios.igrejaPrincipal[0] && (s += "[building]church_f[/building] " + _t("firstChurch") + " | "), this.dados.aldeia.defensiva.edificios.igreja[0] && (s += "[building]church_f[/building] " + _t("church") + " " + this.dados.aldeia.defensiva.edificios.igreja[1] + " | "), this.dados.aldeia.defensiva.tropas.visiveis && a != _t("offensive") && a != _t("probOffensive") && (s += this.dados.aldeia.defensiva.tropas.apoios + " " + _t("defensiveNukes") + " | ")), s += "\n\n[b]" + i + "[/b]", s += "" + e
+		return (this.dados.player.playerEstaAtacar || this.dados.player.playerQuerInfoDefensor) && (a = this.dados.aldeia.defensiva.tipoAldeia), this.dados.player.playerEstaAtacar && !this.dados.player.playerQuerInfoAtacante || (a = this.dados.aldeia.ofensiva.tipoAldeia), !this.dados.player.playerEstaAtacar && this.dados.player.playerQuerInfoDefensor && (a = this.dados.aldeia.defensiva.tipoAldeia), s += "[building]wall[/building][color=#5c3600][b] " + _t("wall") + " " + this.dados.aldeia.defensiva.edificios.muralha[1] + "[/b][/color] ", s += "\n\n[b]" + i + "[/b]", s += "" + e
 	},
 	escreveNota: function() {
 		var a, e, i = this,
